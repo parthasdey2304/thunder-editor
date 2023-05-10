@@ -6,12 +6,14 @@ This is the first build of this application, the upcoming features include:
 + Output terminal
 + Auto-complete
 + Code Suggestions
++ Co-pilot support
 
 # Pre-requisites
 To run this code you would need the following:
 + Python(version 3.7 or higher)
 + Flask python package
 + Git
++ RainbowJS
 
 
 # Installation
