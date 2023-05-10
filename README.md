@@ -8,7 +8,7 @@ This is the first build of this application, the upcoming features include:
 + Auto-complete
 + Code Suggestions
 
-# Prerequisites
+# Pre-requisites
 To run this code you would need the following:
 + Python(version 3.7 or higher)
 + Flask python package
