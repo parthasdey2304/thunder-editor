@@ -43,7 +43,7 @@ git clone https://github.com/parthasdey2304/thunder-editor.git
 cd thunder-editor
 ```
 
-+ Running the ****server.py*** file:
++ Running the ***server.py*** file:
 ```
 python3 server.py
 ```
