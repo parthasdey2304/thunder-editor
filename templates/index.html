@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Text Area with Line Numbers using Tailwind CSS</title>
+		<script src="https://cdn.tailwindcss.com"></script>		
+		
+		<style>
+			textarea::-webkit-scrollbar {
+  				display: none;
+			}
+		</style>
+	</head>
+	<body class="w-full bg-black">
+		<div class="container flex-col w-full">
+
+			<nav class="flex justify-between px-2 py-2 mb-2 w-full">
+               
+				<div class="flex space-x-2 justify-center pt-2 pl-2">
+                    <form action="" class="flex space-x-2 justify-center pt-2 pl-2">
+					<div class="bg-black" style="border-radius: 50%;">
+						<div class="border-2 border-white" style="border-radius: 50%;">
+							<img src="../static/img/thunderbolt.jpg" alt="GitHub" style="border-radius: 50%;" class="w-10 rounded-[50%] cursor-pointer">
+						</div>
+					</div>
+
+					<div class="pt-1">
+						<h1 class="text-3xl text-white font-bold font-mono cursor-pointer">Thunder Editor</h1>
+					</div>
+				</div>
+
+				<div class="pt-4">
+					<label for="language">
+						<span class="text-white font-bold">Language: </span>
+
+						<select name="language" id="language-select" class="px-4 py-1 mx-1 rounded-2xl font-bold outline-none border border-white" required>
+							<option value="none">Select</option>
+							<option value="java">Java</option>
+							<option value="py">Python</option>
+							<option value="cpp">C++</option>
+							<option value="c">C</option>
+							<option value="kt">Kotlin</option>
+							<option value="js">JavaScript</option>
+							<option value="dart">Dart</option>
+						</select>
+                        <span class="text-red-600 font-extrabold">
+                            *
+                        </span>
+					</label>
+				</div>
+
+				<div class="pt-4">
+					<label for="file_name flex">
+						<span class="text-white font-bold">File Name: </span>
+						<input type="text" id="file_name" name="file_name" class="px-4 py-1 mx-1 rounded-2xl font-semibold outline-none border border-white" placeholder="Filename" autofocus required>
+                        <span class="text-red-600 font-extrabold">
+                            *
+                        </span>
+					</label>
+				</div>
+
+				<div class="pt-2">
+						<button type="button" class="px-4 py-2 bg-blue-700 border-2 border-white rounded-2xl text-white font-bold">Run</button>
+				</div>
+                </form>
+			</nav>
+
+			<div class="flex w-full">
+				<div class="line-numbers block px-2 py-4 font-mono text-gray-300 w-12 text-right"></div>
+
+				<div class="flex justify-between w-full">
+					<textarea id="myTextarea" style="background-color: rgb(13, 13, 59);" class="text-area text-white flex-1 block border rounded-xl border-gray-300 p-4 font-mono leading-normal resize-none min-h-screen w-full outline-none mr-4 mb-4 overflow-y-scroll" wrap="soft" spellcheck="false" autofocus></textarea>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			const lineNumbersEl = document.querySelector('.line-numbers');
+			const textAreaEl = document.querySelector('.text-area');
+
+			const updateLineNumbers = () => {
+				const lines = textAreaEl.value.split('\n');
+				const totalLines = lines.length;
+				let lineNumbersHtml = '';
+
+				for (let i = 1; i <= totalLines; i++) {
+					lineNumbersHtml += `<span class="block">${i}</span>`;
+				}
+
+				lineNumbersEl.innerHTML = lineNumbersHtml;
+			};
+
+			textAreaEl.addEventListener('input', updateLineNumbers);
+
+			let string = "";
+
+			const btn = document.querySelector('button');
+			const filename = document.querySelector('#file_name');
+			const language = document.querySelector('#language-select');
+			btn.addEventListener('click', () => {
+				file_content = textAreaEl.value;
+				file_name = filename.value;
+				extension = language.value;
+				console.log(file_name + "." + extension);
+				console.log(file_content);
+			});
+		</script>
+	</body>
+</html>
