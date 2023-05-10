@@ -7,6 +7,7 @@ This is the first build of this application, the upcoming features include:
 + Auto-complete
 + Code Suggestions
 + Co-pilot support
++ Switching over to Django to add user authentication
 
 # Pre-requisites
 To run this code you would need the following:
