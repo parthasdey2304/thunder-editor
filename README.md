@@ -1,4 +1,3 @@
-
 This is a basic online code editor.
 
 # Upcoming features
@@ -43,15 +42,13 @@ git clone https://github.com/parthasdey2304/thunder-editor.git
 cd thunder-editor
 ```
 
-+ Running the ***server.py*** file:
++ Running the **server.py** file:
 ```
 python3 server.py
 ```
 
 # Screenshot
 ![image](https://github.com/parthasdey2304/thunder-editor/assets/131694386/66841277-178d-425a-97d4-d0fc6f055707)
-
-
 
 
 ![image](https://github.com/parthasdey2304/thunder-editor/assets/131694386/aa2e5a4a-90fe-48e2-a08e-0f4799c67419)
