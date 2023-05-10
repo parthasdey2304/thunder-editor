@@ -57,7 +57,7 @@ python3 server.py
 
 
 # Contributing
-We welcome contributions from the community! We welcome your contributions to improve the project. If you'd like to contribute to Tkinter-Image-Viewer, please read the following guidelines on how to contribute:
+We welcome contributions from the community! If you'd like to contribute to thunder-editor, please read the following guidelines on how to contribute:
 + Fork the repository and create a new branch for your changes.
 + Make your changes to the code.
 + Test your changes thoroughly.
