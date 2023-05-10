@@ -1,4 +1,4 @@
-# Thunder-Editor
+
 This is a basic online code editor.
 
 # Upcoming features
