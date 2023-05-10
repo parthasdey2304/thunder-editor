@@ -52,13 +52,14 @@
 					<label for="file_name flex">
 						<span class="text-white font-bold">File Name: </span>
 						<input type="text" id="file_name" name="file_name" class="px-4 py-1 mx-1 rounded-2xl font-semibold outline-none border border-white" placeholder="Filename" autofocus required>
-                        <span class="text-red-600 font-extrabold">
+                        <span class="text-red-600 font-extrabold" spellcheck="false">
                             *
                         </span>
 					</label>
 				</div>
 
 				<div class="pt-2">
+					<form action="/button" method="post"></form>
 						<button type="button" class="px-4 py-2 bg-blue-700 border-2 border-white rounded-2xl text-white font-bold">Run</button>
 				</div>
                 </form>
@@ -100,9 +101,26 @@
 				file_content = textAreaEl.value;
 				file_name = filename.value;
 				extension = language.value;
-				console.log(file_name + "." + extension);
+				file_name = file_name + "." + extension;
+				console.log(file_name);
 				console.log(file_content);
+
+				const element = document.createElement('a');
+				const blob = new Blob([content], {
+					type: "plain/text"
+				});
+
+				const fileUrl = URL.createObjectURL(blob);
+				element.setAttribute('href', fileUrl);
+				element.setAttribute('download', file_name);
+				element.style.display = 'none';
+
+				document.body.appendChild(element);
+				element.click();
+
+				document.body.removeChild(element);
 			});
+
 		</script>
 	</body>
 </html>
